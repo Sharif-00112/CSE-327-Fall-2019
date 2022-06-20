@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Software Requirements and Specifications</title>
+	<style type="text/css">
+	@media print {
+    #printbtn {
+        display :  none;
+   			 }
+		}
+	</style>
+	<h1><center>Software Requirements Specification</center></h1>
+	<br><h4 align="center">For</h4>
+	<h2><center>Reading Monitoring Application</center></h2>
+	<br><br>
+		<h4 align="center">Version 1.00 Approved</h4>
+		<br><br>
+		<h3 align="center"><font size="4">Prepared by -</font></h3>
+		<p align="center"> <font size="4">Kamruzzman Shuvo<br>Md Sharif Hossain<br>Nusrat Jahan Khan Shila<br>Faria Rahman Annasha</font><br></p>
+		<br><br>
+		<h3 align="center"><font size="4">Organization</font></h3>
+		<p align="center"><font size="4">CSE327.2, North South University</font></p>
+		<br><br>
+	</head>
+</head>
+<body>
+	<p style="page-break-after:always"></p>
+	<h3 align="left">Table of Contents</h3>
+	<p style="line-height:1.10">
+		<span><b>1.&emsp;Introduction</b>&emsp;
+		...............................................................................................02</span><br>
+		<span><b>&emsp;1.1&emsp;Purpose</b>&emsp;&nbsp;&nbsp;...............................................................................................02</span><br>
+		<span><b>&emsp;1.2&emsp;Document Conventions</b>&emsp;
+		...................................................................................02</span><br>
+		<span><b>&emsp;1.3&emsp;Intended Audience and Reading Suggestions</b>&emsp;
+		..........................................02</span><br>
+		<span><b>&emsp;1.4&emsp;Product Scope</b>&emsp;
+		..............................................................................02</span><br>
+		<span><b>&emsp;1.5&emsp;References</b>&emsp;
+		...............................................................................02</span><br>
+
+		<span><b>2.&emsp;Overall Description</b>&emsp;
+		.........................................................................03</span><br>
+		<span><b>&emsp;2.1&emsp;Product Perspective</b>&emsp;
+		..........................................................................03</span><br>
+		<span><b>&emsp;2.2&emsp;Product Functions</b>&emsp;
+		..........................................................................03</span><br>
+		<span><b>&emsp;2.3&emsp;User Classes and Characteristics</b>&emsp;
+		............................................................03</span><br>
+		<span><b>&emsp;2.4&emsp;Operating Environment</b>&emsp;
+		..........................................................................03</span><br>
+		<span><b>&emsp;2.5&emsp;Design and Implementation Constraints</b>&emsp;
+		..........................................................03</span><br>
+		<span><b>&emsp;2.6&emsp;User Documentation</b>&emsp;
+		..........................................................................03</span><br>
+		<span><b>&emsp;2.7&emsp;Assumptions and Dependencies</b>&emsp;
+		....................................................................03</span><br>
+		<span><b>3.&emsp;External Interface Requirements</b>&emsp;
+		........................................................................04</span><br>
+		<span><b>&emsp;3.1&emsp;User Interfaces</b>&emsp;
+		................................................................................04</span><br>
+		<span><b>&emsp;3.2&emsp;Hardware Interfaces</b>&emsp;................................................................................04</span><br>
+		<span><b>&emsp;3.3&emsp;Software Interfaces</b>&emsp;................................................................................04</span><br>
+		<span><b>&emsp;3.4&emsp;Communications Interfaces</b>&emsp;................................................................................05</span><br>
+		<span><b>4.&emsp;System Features</b>&emsp;
+		.................................................................................05</span><br>
+		<span><b>&emsp;4.1&emsp;System Feature 1</b>&emsp;.................................................................................05</span><br>
+		<span><b>&emsp;4.2&emsp;System Feature 2</b>&emsp;.................................................................................05</span><br>
+		<span><b>5.&emsp;Other Nonfunctional Requirements</b>&emsp;
+		....................................................06</span><br>
+		<span><b>&emsp;5.1&emsp;Performance Requirements</b>&emsp;
+		...................................................................06</span><br>
+		<span><b>&emsp;5.2&emsp;Safety Requirements</b>&emsp;
+		......................................................................06</span><br>
+		<span><b>&emsp;5.3&emsp;Security Requirements</b>&emsp;
+		.......................................................................06</span><br>
+		<span><b>&emsp;5.4&emsp;Software Quality Attributes</b>&emsp;
+		....................................................06</span><br>
+		<span><b>&emsp;5.5&emsp;Business Rules</b>&emsp;
+		...........................................................................06</span><br>
+		<span><b>Appendix A: Glossary</b>&emsp;
+		...................................................................06</span><br>
+		<span><b>Appendix B: Analysis Models</b>&emsp;
+		...................................................................06</span><br>
+		<span><b>Appendix C: To Be Determined List</b>&emsp;
+		...................................................................06</span><br>
+	</p>
+
+	<br>
+	<h3 align="left">Revision History</h3>
+
+	<table border="1" style="width:50%"" style="border-spacing: 2pt" style="page-break-after:always" >
+		<tr>
+			<th style="text-align: left;" style="width:20%;">Name</th>
+			<th style="text-align: left;" style="width:15%;">Date</th>
+			<th style="text-align: left;" style="width:30%;">Reason for Changes</th>
+			<th style="text-align: left;" style="width:15%;">Version</th>
+		</tr>
+		<tr>
+			<td style="text-align: left;" >&nbsp;</td>
+			<td style="text-align: left;">&nbsp;</td>
+			<td style="text-align: left;">&nbsp;</td>
+			<td style="text-align: left;">&nbsp;</td>
+		</tr>
+		<tr>
+			<td style="text-align: left;">&nbsp;</td>
+			<td style="text-align: left;">&nbsp;</td>
+			<td style="text-align: left;">&nbsp;</td>
+			<td style="text-align: left;">&nbsp;</td>
+		</tr>
+	</table>
+	<p style="page-break-after:always"></p>
+
+	<h3 align="left">1.	Introduction</h3>
+	<h4 align="left">&emsp;1.1&emsp;Purpose</h4>
+	<p>&emsp;&emsp;The purpose of product is to track how long a student reads a certain selection given by the instructor  
+		<br>&emsp;&emsp;by tracking his eyes with AI.This srs describes the whole system of our software. We can know the  
+		<br>&emsp;&emsp;proper duration of reading period. It will be very useful if someone sort those learning materials 
+		<br>&emsp;&emsp;based on levels of learning.
+	</p>
+	<h4 align="left">&emsp;1.2&emsp;Document Conventions</h4>
+	<p>&emsp;&emsp;We have used some documentation in this project.These are: <br>
+        <ul>
+          <li>Database</li>
+          <li>Entity Relationship</li>
+          <li>Application programming interface</li>
+          <li>Software Requirements Specification</li>
+	</ul>
+		
+	</p>
+	<h4 align="left">&emsp;1.3&emsp;Intended Audience and Reading Suggestions</h4>
+	<p>&emsp;&emsp;The teacher and the user both use this project.This srs is intended for teachers who will evaluate this  
+		<br>&emsp;&emsp;project. The user can use this system also.The rest of the srs mostly contains the system features 
+		<br>&emsp;&emsp;which is most pertinent for both the teachers and the users.Developers who can review project’s 
+		<br>&emsp;&emsp;capabilities and more easily understand where their efforts should be targeted to improve or add 
+		<br>&emsp;&emsp;more features to it. Project testers can use this document as a base for their testing strategy as  
+		<br>&emsp;&emsp;some bugs are easier to find using a requirements document.End users of thisapplication who wish to 
+		<br>&emsp;&emsp;read about what this project can do it.
+	 
+	</p>
+	<h4 align="left">&emsp;1.4&emsp;Product Scope</h4>
+	<p>&emsp;&emsp;This is the product which will used by teachers to check whether a student assigned to read a specific   
+		<br>&emsp;&emsp;pdf or not and how long is the student spending in specific paragraphs on that pdf. It  is a tiny,  
+		<br>&emsp;&emsp;flexible, hard-working tool to automate processing & organizing files and folders. There are a group   
+		<br>&emsp;&emsp;of different files and folders on this project. It will give the teachers about information and feedback 
+		<br>&emsp;&emsp;with data of specific students. We can also organize our associations in profiles and automatically scan   
+		<br>&emsp;&emsp;monitoredfolders at a defined time interval. We can use this product in other sectors.
+		
+	</p>
+	<h4 align="left">&emsp;1.5&emsp;References</h4>
+	<p><ul>
+			<li>http://www.dropitproject.com/assets/guides/DropIt_SRS.pdf</li>
+			<li> https://ieeexplore.ieee.org/document/278253</li>
+			<li> Fundamentals of database systems by Ramez Elmarsi and Shamkant B.Navathe</li>
+		</ul> 
+		
+	</p>
+	<p style="page-break-after:always"></p>
+	<h3 align="left">2.	Overall Description</h3>
+	<h4 align="left">&emsp;2.1&emsp;Product Perspective</h4>
+	<p>&emsp;&emsp;This is a totally new self constructed product. No other previous version was launched before.</p>
+
+	<h4 align="left">&emsp;2.2&emsp;Product Functions</h4>
+	<p>
+		<ul>
+			<li>&emsp;Teachers can create an account and open a class with a unique reference code.</li>
+			<li>&emsp;Students can create an account.</li>
+			<li>&emsp;Students can enroll under a teacher with the required code for a specific class of that teacher.</li>
+			<li>&emsp;Students and teachers can sign in using their facebook, email, or phone number.</li>
+			<li>&emsp;Teachers can upload pdf files to their specific classes.</li>
+			<li>&emsp;Students can open and view the pdf uploaded by their teachers.</li>
+			<li>&emsp;Teachers can check which student has spent how much time in reading a specific paragraph of
+				<br>&emsp;a specific pdf.</li>
+			<li>&emsp;Snaps will be taken of  the students in every 30 seconds so that teachers can monitor if the 
+				<br>&emsp;reader is the real one.</li>
+			</ul> 
+	</p>
+
+	<h4 align="left">&emsp;2.3&emsp;User Classes and Characteristics</h4>
+	<p>
+		&emsp;&emsp;It is assumed that this product will be mainly used by students and teachers. However it might also
+		<br>&emsp;&emsp;be used by data analysts of various companies. Students and teachers are more important user 
+		<br>&emsp;&emsp;classes compared to the other users. There will be other classes like sign in, sign up etc. 
+	</p>
+	<h4 align="left">&emsp;2.4&emsp;Operating Environment</h4>
+	<p>
+		&emsp;&emsp;This system will operate on android smart phones and on desktops. The android version of the smart
+		<br>&emsp;&emsp;phones must be at least Kitkat 4.4.4 or more.
+	</p>
+	<h4 align="left">&emsp;2.5&emsp;Design and Implementation Constraints</h4>
+	<p>
+		&emsp;&emsp;In order to effectively use the web version of this system, the user's pc must have a built in webcam or
+		<br>&emsp;&emsp;a webcam connected to their pc. Developers must have access to firebase since firebase is used for user
+		<br>&emsp;&emsp;authentication. For developing android versions developers must know java and for the web version
+		<br>&emsp;&emsp;a php framework. For communication protocol developers must be familiar with git and Bitbucket.
+		<br>&emsp;&emsp;For using google and facebook API, developers need to be flexiable to that. 
+	</p>
+	<h4 align="left">&emsp;2.6&emsp;User Documentation</h4>
+	<p>
+		&emsp;&emsp;A manual in the form of a use case diagram shall be provided with the software.
+	</p>
+	<h4 align="left">&emsp;2.7&emsp;Assumptions and Dependencies</h4>
+		<p>&emsp;&emsp;The API used for image processing and signing in by google in this software will be reused from one 
+		<br>&emsp;&emsp;of the Google's API.
+		</p>
+	
+	<p style="page-break-after:always"></p>
+	<h3 align="left">3.	External Interface Requirements</h3>
+	<h4 align="left">&emsp;3.1&emsp;User Interfaces</h4>
+		<p>&emsp;&emsp;User have an login and registration page. A student must be registered before login. User will get the 
+		<br>&emsp;&emsp; pdf by spliting few parts.
+		
+	</p>
+	<h4 align="left">&emsp;3.2&emsp;Hardware Interfaces</h4>
+	<p><ul style="list-style-type:square;">
+			<li>Windows or Linux</li>
+			<li>Browser(Support Javascript, CGI, Html) </li>
+			<li>WebCam</li>
+			<li>Android Device</li>
+		</ul>
+	</p>
+	<h4 align="left">&emsp;3.3&emsp;Software Interfaces</h4>
+			<p>&emsp;&emsp;The android application for this product was developed by using android studio.The database was  
+			<br>&emsp;&emsp;created using MySQL on the Apache server. Django, a python framework was used for the website    
+			<br>&emsp;&emsp;version of the product The server was created using javascript. User Information like username   
+			<br>&emsp;&emsp;and password are shared between the database and the server.The student's study records are also 
+			<br>&emsp;&emsp;shared between the database and the server. The teacher can see any student's recent duration log.
+	</p>
+	<h4 align="left">&emsp;3.4&emsp;Communications Interfaces</h4>
+	<p><ul>
+		<li>This project supports all types of web browsers which spports Html 5, Javascript and Android smart phone with minimum android Version 4.4.4 </li>
+		<li>We suggest to use Google Chrome or Chromium browser. We use front camera for recognition of <br>face and eye tracking.</li>
+		<li>For desktop/laptop adequate webcam must be needed with minimum configuration Performance.</li>
+		<li>We will be used Apache for server and MySQL will be used for database.</li>
+		</ul>
+		
+	</p>
+	<p style="page-break-after:always"></p>
+	<h3 align="left">4.	System Features</h3>
+
+	<h4 align="left">&emsp;4.1&emsp;Feature 1: Login</h4>
+		<p>&emsp;&emsp;&emsp;<img src="contents\Login.jpg" alt="Login" height="300" width="200"></p>
+		<!--<p>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<a href="contents\Login.psd">Login.psd</a></p>-->
+		<p>&emsp;&emsp;&emsp;<img src="contents\Android Mobile – gghg.2.jpg" alt="Login" height="300" width="200"></p>
+		<p>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<a href="contents\Login.psd">Login.psd</a></p>
+		<h4 align = "left">&emsp;&emsp;4.1.1 Description and Priority</h4>
+		<p>&emsp;&emsp;&emsp;The teacher or the student enters their username and password. The username and password pair
+		<br>&emsp;&emsp;&emsp;is cross checked with the username and password on the database and if a pair matches then 
+		<br>&emsp;&emsp;&emsp;the user is given access. 
+		</p>
+		<h4 align = "left">&emsp;&emsp;4.1.2 Stimulus/Response Sequences</h4>
+		<p>&emsp;&emsp;&emsp;The user must have an internet connection. The user clicks on the login button.
+		<br>&emsp;&emsp;&emsp;Entering username and password to enter their dashboard and get access to the rest of the product 
+		<br>&emsp;&emsp;&emsp;features. The user could enter a blank username or password. In this case the user will be shown an 
+		<br>&emsp;&emsp;&emsp;error message saying to enter the necessary information.
+			
+		</p>
+
+		<h4 align = "left">&emsp;&emsp;4.1.3 Functional Requirements</h4>
+		<p>&emsp;&emsp;&emsp;<b>Case Dependent:</b> Student/Teacher login.
+		<br>&emsp;&emsp;&emsp;<b>Actor:</b> Student/Teacher.
+		<br>&emsp;&emsp;&emsp;<b>Type:</b> Primary.
+		</p>
+		<p style="page-break-after:always"></p>
+		<h4 align="left">&emsp;4.2&emsp;Feature 2: Registration</h4>
+		<p>&emsp;&emsp;&emsp;<img src="contents\Registration.jpg" alt="Registration" height="300" width="200"></p>
+		<p>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<a href="contents\Registration.psd">Registration.psd</a></p>
+		<h4 align = "left">&emsp;&emsp;4.2.1 Description and Priority</h4>
+		<p>&emsp;&emsp;&emsp;The teacher or the student inputs their full name, email,username ,password, confirm password.
+		<br>&emsp;&emsp;&emsp;Username and password pair are checked. If username avialable and password pair are matched 
+		<br>&emsp;&emsp;&emsp;then all input data are saved on the database for further login. 
+		</p>
+		<h4 align = "left">&emsp;&emsp;4.2.2 Stimulus/Response Sequences</h4>
+		<p>&emsp;&emsp;&emsp;The user must have an internet connection. The user clicks on the registration button.
+		<br>&emsp;&emsp;&emsp;Entering fullname,username,password, email to successful registration and get access  
+		<br>&emsp;&emsp;&emsp;to the rest of the product features. The user could enter a blank username or password. 
+		<br>&emsp;&emsp;&emsp;In this case the user will be shown an error message saying to enter the necessary information.		
+		</p>
+
+		<h4 align = "left">&emsp;&emsp;4.2.3 Functional Requirements</h4>
+		<p>&emsp;&emsp;&emsp;<b>Case Dependent:</b> Student/Teacher Registration.
+		<br>&emsp;&emsp;&emsp;<b>Actor:</b> Student/Teacher.
+		<br>&emsp;&emsp;&emsp;<b>Type:</b> Primary.
+		</p>
+	
+	<h4 align="left">&emsp;4.3&emsp;Feature 3: Uploading file</h4>
+		<p>&emsp;&emsp;&emsp;<img src="contents\File_uploading.png" alt="File_uploading" height="300" width="250"></p>
+		<p>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<a href="contents\File_uploading.ai">File_uploading.ai</a></p>
+		<h4 align = "left">&emsp;&emsp;4.3.1 Description and Priority</h4>
+		<p>&emsp;&emsp;&emsp;The teacher is only allowed to upload pdf files. After clicking on upload the the pdf file is stored 
+		<br>&emsp;&emsp;&emsp;in the database.
+		</p>
+		<p style="page-break-after:always"></p>
+		<h4 align = "left">&emsp;&emsp;4.3.2 Stimulus/Response Sequences</h4>
+		<p>&emsp;&emsp;&emsp;The teacher selects a pdf and clicks on upload. Uploading a pdf file of a certain course of a 
+		<br>&emsp;&emsp;&emsp;section for the students of that section. The file selected for upload must be in pdf format.	
+		</p>
+		<h4 align = "left">&emsp;&emsp;4.3.3 Functional Requirements</h4>
+		<p>&emsp;&emsp;&emsp;<b>Case Dependent:</b> PDF upload.
+		<br>&emsp;&emsp;&emsp;<b>Actor:</b> Teacher.
+		<br>&emsp;&emsp;&emsp;<b>Type:</b> Primary.
+		</p>
+
+	<h4 align="left">&emsp;4.4&emsp;Feature 4: Reading PDF</h4>
+		<p>&emsp;&emsp;&emsp;<img src="contents\Pdf Reading.jpg" alt="Reading Pdf" height="300" width="200"></p>
+		<p>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<a href="contents\Pdf Reading.psd">Pdf Reading.psd</a></p>
+		<h4 align = "left">&emsp;&emsp;4.4.1 Description and Priority</h4>
+		<p>&emsp;&emsp;&emsp;The student clicks on a pdf to read from the dashboard. After clicking on a pdf the browser or   
+		<br>&emsp;&emsp;&emsp;the app asks for the permission to access the user's webcam. After granting permission   
+		<br>&emsp;&emsp;&emsp;the user can start reading the pdf and the system tracks the user's eyes recording how long the  
+		<br>&emsp;&emsp;&emsp;user has read a certain part of the pdf.
+		</p>
+		<h4 align = "left">&emsp;&emsp;4.4.2 Stimulus/Response Sequences</h4>
+		<p>&emsp;&emsp;&emsp;The user must have a webcam. The student could make someone else read the pdf as an act of fraud.  
+		<br>&emsp;&emsp;&emsp;In this case the user's face will be detected and compared with the image of the user and 
+		<br>&emsp;&emsp;&emsp;a warning message will be shown if the images don't match.
+		</p>
+
+		<h4 align = "left">&emsp;&emsp;4.4.3 Functional Requirements</h4>
+		<p>&emsp;&emsp;&emsp;<b>Case Dependent:</b> Reading PDF.
+		<br>&emsp;&emsp;&emsp;<b>Actor:</b> Student.
+		<br>&emsp;&emsp;&emsp;<b>Type:</b> Primary.
+		</p>
+	<h4 align="left">&emsp;4.5&emsp;Feature 5: Report and summary</h4>
+	<h4 align = "left">&emsp;&emsp;4.5.1 Description and Priority</h4>
+		<p>&emsp;&emsp;&emsp;The teacher selects a particular student's reading record. The teacher must be logged in
+		<br>&emsp;&emsp;&emsp;and have an internet connection.  
+		
+		</p>
+		<h4 align = "left">&emsp;&emsp;4.5.2 Stimulus/Response Sequences</h4>
+		<p>&emsp;&emsp;&emsp;After clicking on a specific student's reading record the data of that student's reading  
+		<br>&emsp;&emsp;&emsp;record is selected from a table in the database which is represented by graphs. 
+		</p>
+		<h4 align = "left">&emsp;&emsp;4.5.3 Functional Requirements</h4>
+		<p>&emsp;&emsp;&emsp;<b>Case Dependent:</b> Viewing student's reading records
+		<br>&emsp;&emsp;&emsp;<b>Actor:</b> Teacher.
+		<br>&emsp;&emsp;&emsp;<b>Type:</b> Primary.
+		</p>
+
+	<h3 align="left">5.	Other Nonfunctional Requirements</h3>
+	<h4 align="left">&emsp;5.1&emsp;Performance Requirements</h4>
+	<p>&emsp;Mandatory: e.g. response time a valve to close</p>
+	<ul>
+		<li>The system is unusable</li>
+		<li>Not mandatory: e.g. response time for a UI</li>
+		<li>The system is usable but provides a non-optimal experience</li>
+		<li>Searching for previous pdf need to be quicker</li>
+		<li>Detecting the movement of face and ensure that it is not the still picture</li>
+		<li>The time duration of reading will be calculated as faster</li>
+		<li>The face cognizance API need to be faster and it will be able to detect the face and eyes movement
+		<br>from different angles.</li>
+		<li>It will turn the pages and slides smoothly</li>
+	</ul>
+	<p>&nbsp;</p>
+	<h4 align="left">&emsp;5.2&emsp;Safety Requirements</h4>
+	<p>&emsp;The user need to be behold at the screen when it to work, when the user use the system for a long time it  
+	<br>&emsp;will damage the eye sight of the user.To alleviate the risk of damaging eyes the user can use glasses or the 
+	<br> &emsp;brightness and the color content will be perfectly optimized according to maintaining the best comfort
+	<br> &emsp;spectrum turn for eyes.
+	</p>
+
+	<h4 align="left">&emsp;5.3&emsp;Security Requirements:</h4>
+	<p>&emsp;The faster and sooner in the software development process it has to fix the security issues. Application 
+	<br>&emsp;security tools that integrate into the application development environment can make this process and
+	<br>&emsp;workflow simpler and more effective. These tools are also useful for compliance audits, since it can save
+	<br>&emsp;time and the expense by catching problems before the auditors seen them.The user will be notified 
+	<br>&emsp;prior to using the system that this is the sole purpose of taking the picture and the picture will 
+	<br>&emsp;not be misused in any other way.</p>
+
+	<ul style="list-style-type:circle;">
+		<li>The pdf screening quality need to good and acceptable for the user to read.</li>
+		<li>There must be the backup of uploaded files on the system</li>
+		<li>Performance level of the a student will only monitored by the teacher</li>
+		<li>Enrollment of a student should must be ensure by the teacher</li>
+		<li>Each student should have the privacy of informations</li>
+	</ul>
+	
+	<h4>&emsp;5.4&emsp;Software Quality Attributes</h4>
+	<p>&emsp;Well documentation for readability. The software will be classify into small part in development stage  
+	<br>&emsp;for further adding feature. Upload pdf file and reading file are separate feature from each other for
+	<br>&emsp; easy testing. It is based on multi-platform which increase its availability. Rest API make sure its 
+	<br>&emsp;database flexibility. It is really a effective and secure software for educational purpose. In future 
+	<br>&emsp;it can be also used for survey of product for marketing company.</p>
+
+	<h4>&emsp;5.5&emsp;Business Rules</h4>
+	<ul style="list-style-type:square;">
+		<li>In Every failure case for login/upload file/classroom accessibility will be observed</li>
+		<li>User can give the feedback for the system</li>
+		<li>Application can an collect relevant data from the user to improve the whole performance of the system</li>
+	</ul>
+	<p>&nbsp;</p>
+	
+
+	<h3 align="left">6.	Others Requirements</h3>
+	<p>
+		<ul>
+			<li>&emsp;Users must change the initially assigned login password immediately after the first successful 
+				<br>&emsp;login. Moreover, the initial should never be reused.</li>
+			<li>&emsp;The software should be portable. So moving from one OS to other OS does not create any problem.
+				<br>&emsp;</li>
+			
+		</ul>
+	</p>
+	<br><br>
+	<p style="page-break-after:always"></p>
+
+	<h2>Appendix A: Glossary</h2>
+	<h2>Appendix B: Analysis Models</h2>
+	<p><ul>
+			<li>&emsp;We used iterative and increment model to analyse the project. We devided the product function
+				<br>&emsp;into 8 parts. The developing order of the features or product functions is i-ii-iv-iii-v-vi-vii-viii. 
+				<br>&emsp;We devided it into 3 phases. Phase 1 contains i, ii and iv. Phase 2 contains iii, v and vi.
+				<br>&emsp;Phase 3 contains vii and viii. </li>
+		</ul>
+	</p>
+	<h2>Appendix C: To Be Determined List</h2>
+
+
+
+	<center><button id="printbtn" onClick="window.print();"><h1>Print</h1></button></center>
+
+	
+
+</body>
+</html>

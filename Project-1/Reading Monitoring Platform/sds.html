@@ -1,0 +1,278 @@
+<!DOCTYPE HTML>
+<html>
+        <head>
+                <title>Software Design Specifications</title>
+                <style type="text/css">
+                @media print {
+                #printbtn {
+                    display :  none;
+                            }
+                    }
+                </style>
+                <h1><center>Software Design Specification</center></h1>
+                <br><h4 align="center">For</h4>
+                <h2><center>Reading Monitoring Application</center></h2>
+                <br><br>
+                    <h4 align="center">Version 1.00 Approved</h4>
+                    <br><br>
+                    <h3 align="center"><font size="4">Prepared by -</font></h3>
+                    <p align="center"> <font size="4">Kamruzzman Shuvo<br>Md Sharif Hossain<br>Nusrat Jahan Khan Shila<br>Faria Rahman Annasha</font><br></p>
+                    <br><br>
+                    <h3 align="center"><font size="4">Organization</font></h3>
+                    <p align="center"><font size="4">CSE327.2, North South University</font></p>
+                    <br><br>
+                </head>
+            </head>
+<p>&nbsp;</p>
+<ul>
+	<h3>1.Introduction</h3>
+	 <p>In this product a instructor can track how long a student can read by tracking eyes using AI. In this SDS we
+	  can draw the UML diagram. we draw our classes and know all of the attributes and their methods. By using this UML 
+	  diagram we can reach to our goal. In this product we use login, registration, user, session etc classes. Both the 
+	  teacher and students are benificial from this product. There are group of different files and folder. We connected 
+	  all the classes in UML diagram.We also organize our associations in profiles and automatically scan monitoredfolders
+	  at a defined time interval.
+	</p>
+	<h3>2.Document Conventions</h3>
+	<p>
+
+	</p>
+
+	<h3>3. Description of Design Components</h3>
+		<h4> 3.1 Components Overview </h4>
+		<p>
+		 We will be giving a basic overview of the various components to be used in our system.
+		</p>
+		<h4> 3.2 Database </h4>
+		<p> SqLite will be used as our database software for Hand held software application and PostgreSQL will be used for our web applications. To represent various data from our project, we will be using tables included within the database software. </p>
+	</p>
+		<h4> 3.3 Server Software </h4>
+			<p>
+			Through our server software, we will be able to directly manipulate the contents of our database system based on commands provided from the server procedure proxy.
+			</p>
+
+			<h4> 3.4 Server procedure proxy </h4>
+			<p>
+			we will be provided an interface for us to request information or submit updates to the server through the server procedure proxy. The clients (Teacher) will be given limited access to the server so that they can update the contents._
+			</p>
+
+			<h4> 3.5 Client Software </h4>
+			<p>
+				The client software on which we will present our project will either be on a desktop computer or a hand held device. The software will have two general purposes so that the users can easily update information on the project. Our users will mainly consist of two variants, (Teacher and Student). So for this the software will mainly consist of two interface to accomodate the two different variants.
+
+			<ul>
+			<li>
+				<strong> Hand held Client Software </strong>
+				<br>
+				 The hand held client software will allow both type of users to view their varient of the software and they can also make changes and updates relevent to the inteface assign to them.
+				</li>
+
+				<br>
+				<li>
+				<strong> Desktop Client Software </strong>
+				<br>
+				The Desktop client software will allow both type of users to view their varient of the software and they can also make changes and updates relevent to the inteface assign to them.
+				</li>
+			<br>
+			</ul>
+		</p>
+
+	<h3><strong>4. High-Level Component Design</strong></h3>
+		<ul>
+			<li>Show which component depends on what other components</li>
+		</ul>
+	</li>
+	<h3><strong>5.Class diagrams</strong></h3>
+	<p><img src="contents_SDS\UML\ClassDiagram.jpg"></p>
+
+		<h4>5.1 Class Name: Registration class</h4>
+
+		<p><b>Purpose: </b>Students and teacher both are responsible for maintaining an aacurate registration<br>
+		 record. Students are to arrange to meet with their academic advisor through registration class. In <br>
+		 registration class there are some attributes such as fullName,email,username,password,conPass. This <br>
+		 class also have some methods. </p>
+
+		<h4>&emsp;5.1.1 Attribute</h4>
+		<p><ol>
+			<li><b>Name:</b> fullName
+			<br><b>Type:</b> string
+			<br><b>Purpose:</b> It decleared the user's full name. 
+		</li><br>
+			<li><b>Name:</b> email
+			<br><b>Type:</b> string
+			<br><b>Purpose:</b> It decleared the user's email.
+			</li><br>
+			<li><b>Name:</b> username
+			<br><b>Type:</b> string
+			<br><b>Purpose:</b> It decleared the user's name.
+		</li><br>
+		   <li><b>Name:</b> password
+			<br><b>Type:</b> string
+			<br><b>Purpose:</b> It decleared the user's password.
+		   </li><br>
+			<li><b>Name:</b> conPass
+			<br><b>Type:</b> string
+			<br><b>Purpose:</b> It decleared the confirmation of user's password.
+		</li>
+		
+	</ol></p>
+
+            <h4>&emsp;<b>5.1.2 Methods</b></h4>
+		<p><ol>
+			<li><b>Name:</b> username
+			<br><b>Parameters:</b>(username, string and it calls the username)
+			<br><b>Return type:</b> string
+			<br><b>Purpose and description:</b> It decleared the username. In every registration every person has specific user name.
+			</li>
+
+			<li><b>Name:</b> password
+			<br><b>Parameters:</b>(password, string and it calls the user's password)
+			<br><b>Return type:</b> string
+			<br><b>Purpose and description:</b> It decleared user's password. Every user has different password.
+			</li>
+
+			<li><b>Name:</b> conPass
+			<br><b>Parameters:</b>(conPass, string and it calls confirm password)
+			<br><b>Return type:</b> string
+			<br><b>Purpose and description:</b> It decleared the confirmation of password. When a user can give their password then there are another options fpr confirmation password.
+			</li>
+
+			<li><b>Name:</b> email
+			<br><b>Parameters:</b>(email, string and it calls the user email)
+			<br><b>Return type:</b> string
+			<br><b>Purpose and description:</b> It decleared user's email. Every user has specific email address for their own. They can use their email address in the registration form.
+		</li>
+	</ol>
+	<h3>5.2 Class name: Student</h3>
+	<p><b>Purposes:</b>In this class it has student informations.In student information we have some atrribute this are id,name,class enrollment</p>
+	<h4>&emsp;5.2.1 Atrribute</h4>
+	<p><ol>
+		<li><b>Name:</b> id
+		<br><b>Type:</b> intlong
+		<br><b>Purpoes:</b> it declare student id
+		</li>
+
+		<li><b> Name:</b> name 
+		<br><b>Type:</b> string
+		<br><b>Purpoes:</b>it declare student name
+		</li>
+
+		<li><b> Name:</b> class enrollment
+		<br><b>Type:</b> string
+		<br><b>Purpoes:</b> it declare class enrollment
+		</li>
+	</ol></p>
+
+	<h4>&emsp;5.2.2.Method</h4>
+	<p><ol>
+		<li><b> Name:</b> constructor
+		<br><b>Parameters:</b>id,name
+		<br><b>Return Type:</b>void
+		<br><b>Purpose and description:</b>it declare the costructor method
+		</li>
+	</ol></p>
+
+	<h3>5.3 class name: Teacher</h3>
+	<p><b>Purposes:</b>In this class it has teacher informations.in teacher information we have some atrribute this are id,name,class enrollment,qualification.
+	</p>
+	<h4>&emsp;5.3.1 Atrribute</h4>
+	<p><ol>
+		<li><b>Name:</b> id
+		<br><b>Type:</b> intlong
+		<br><b>Purpoes:</b> it declare teacher id
+		</li>
+
+		<li><b> Name:</b> name 
+		<br><b>Type:</b> string
+		<br><b>Purpoes:</b>it declare teacher name
+		</li>
+
+		<li><b> Name:</b> class enrollment
+		<br><b>Type:</b> string
+		<br><b>Purpoes</b>:it declare class enrollment
+		</li>
+
+		<li><b> Name: </b>qualification
+		<br><b>Type:</b> string
+		<br><b>Purpoes:</b> it declare qualification
+     	</li>
+	</ol></p>
+
+	<h4>&emsp;5.3.2 Method</h4>
+		<p><ol>
+		<li> <b>Name:</b>constructor
+	 	<br><b>Parameters:</b>name,id
+		<br><b>Return Type:</b>void
+		<br><b>Purpose and description:</b>it declare the costructor method	
+		</li>
+	</ol></p>
+
+	<h3>5.4 Class name: ToRead</h3>
+	<p><b>Purposes:</b>in this class it has file uploading informations.in this class we have some atrribute this are id,fileid</p>
+
+	<h4>&emsp;5.4.1 Atrribute</h4>
+	<p><ol>
+		<li><b>Name:</b> id
+		<br><b>Type:</b> intlong
+		<br><b>Purpoes:</b> it declare toread/uploaded file
+		</li>
+
+		<li> <b>Name:</b> fileid 
+		<br><b>Type:</b> long
+		<br><b>Purpoes:</b> it declare fileid	
+    	</li>
+	</ol></p>
+
+	<h4>&emsp;5.4.2 Method</h4>
+	<p><ol>
+	<li> <b>Name:</b>constructor
+	 	<br><b>Parameters:</b> Default
+		<br><b>Return Type:</b> 
+		<br><b>Purpose and description:</b>
+	</li>
+		<li><b>Name:</b>
+	 	<br><b>Parameters:</b>
+		<br><b>Return Type:</b>
+		<br><b>Purpose and description:</b>
+	</li>
+</ol></p>
+
+<h3>5.5 Class name: User</h3>
+<p><b>Purposes:
+</b></p>
+<p>
+	
+</p>
+
+<h4>&emsp;5.5.1 Attributes</h4>
+	<p>
+	<ol>
+	</ol>
+		
+	</p>
+
+<h4>&emsp;5.5.2 Method</h4>
+<p>
+<ol>
+	<li><b>Name:</b> ToValidation
+	<br><b>Parameters:</b> Default
+	<br><b>Return Type:</b>bool
+	<br><b>Purpose and description:</b> It declare tovalidation method.
+	</li>
+</ol>
+</p>
+
+<p>...........................................................................<p>
+<li><strong>Database Design</strong>
+		<ul>			
+			<li>ER Diagram</li>
+			<li>The following per table</li>
+			<li>Purpose of the table</li>
+			<li>Attribute name, type and purpose (foreign key)</li>
+		</ul>
+	</li>
+	<li><strong>Please note your DB design MUST be consistent with your class diagram</strong></li>
+	<li><strong>Implementation plan (Must be on Trello and reproduce here )</strong></li>
+</ul>
+<center><button id="printbtn" onClick="window.print();"><h1>Print</h1></button></center>
+</html>
